@@ -1,0 +1,62 @@
+<div class="list row">
+    <div class="col-md-8">
+     
+    <div class="col-md-6">
+      <h4>Expense List</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let expense of expense; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveexpense(expense, i)"
+        >
+          {{ expense.category }}
+        </li>
+      </ul>
+  
+      <button class="m-3 btn btn-sm btn-danger" (click)="removeAllExpense()">
+        Remove All
+      </button>
+    </div>
+    <div class="col-md-6">
+      <div *ngIf="currentexpense.id">
+        <h4>Menu</h4>
+        <div>
+          <label><strong>Id:</strong></label> {{ currentexpense.id }}
+        </div>
+        <div>
+          <label><strong>Category:</strong></label> {{ currentexpense.category }}
+        </div>
+        <div>
+          <label><strong>Amount:</strong></label>
+          {{ currentexpense.amount }}
+        </div>
+        <div>
+          <label><strong>Comment:</strong></label>
+          {{currentexpense.comment  }}
+        </div>
+        <div>
+            <label><strong>CreatedAt:</strong></label>
+            {{ currentexpense.createdAt }}
+          </div>
+
+          <div>
+            <label><strong>UpdatedAt:</strong></label>
+            {{ currentexpense.updatedAt }}
+          </div>
+          <div>
+
+          
+            
+            
+  
+            <button class="Edit"  routerLink = "/expenses/{{currentexpense.id}}"><b>Edit</b></button>
+      
+  
+      <div *ngIf="!currentexpense">
+        <br />
+        <p>Please click on a Expense...</p>
+      </div>
+    
+  
+    

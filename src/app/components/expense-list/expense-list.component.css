@@ -1,0 +1,47 @@
+.edit-form {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  
+  .Delete{
+    
+    background-color: red ; /* Green */
+    border-radius: 8px;
+    color: black;
+    padding: 10px 15px;
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  
+      
+    }
+  
+    .Delete:hover{
+      cursor: pointer;
+  
+    }
+  
+  
+    
+  .Update{
+    
+    background-color: blue; /* Green */
+    border-radius: 8px;
+    color: black;
+    padding: 10px 15px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  
+      
+    }
+  
+    .Update:hover{
+      cursor: pointer;
+  
+    }

@@ -1,0 +1,82 @@
+
+<div>
+    <div *ngIf="currentexpense" class="edit-form">
+
+     
+      <h4>Expense</h4>
+      <form>
+        <div class="form-group">
+          <label for="category"><b>Category</b></label>
+          <input
+            type="text"
+            class="form-control"
+            id="category"
+            [(ngModel)]="currentexpense.category"
+            name="Category"
+          />
+        </div>
+        <div class="form-group">
+          <label for="amount"><b>Amount</b></label>
+          <input
+            type="text"
+            class="form-control"
+            id="amount"
+            [(ngModel)]="currentexpense.amount"
+            name="Amount"
+          />
+        </div>
+        <div class="form-group">
+          <label for="comment"><b>Comment</b></label>
+          <input
+            type="text"
+            class="form-control"
+            id="comment"
+            [(ngModel)]="currentexpense.comment"
+            name="Comment"
+          />
+        </div>
+        <div class="form-group">
+          <label for="createdAt">CreatedAt</label>
+          <input
+            type="text"
+            class="form-control"
+            id="createdAt"
+            [(ngModel)]="currentexpense.createdAt"
+            name="CreatedAt"
+          />
+        </div>
+        <div class="form-group">
+            <label for="updatedAt">UpdatedAt</label>
+            <input
+              type="text"
+              class="form-control"
+              id="updatedAt"
+              [(ngModel)]="currentexpense.updatedAt"
+              name="UpdatedAt"
+            />
+          </div>
+        >
+  
+      
+      </form>
+  
+      
+  
+      <button class="Delete" (click)="deleteExpense()">
+        <b>Delete</b>
+      </button>
+  
+      <button
+        type="submit"
+        class="Update"
+        (click)="updateExpense()"
+      >
+        <b>Update</b>
+      </button></div>
+      <p><b>{{ message }}</b></p>
+    </div>
+  
+    <div *ngIf="!currentexpense">
+      <br />
+      <p><b>Cannot access this Expense...</b></p>
+    </div>
